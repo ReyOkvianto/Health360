@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Health360 | Diet Tracker</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="images/LogoIcon.png"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="common.css" />
+  <link rel="stylesheet" href="diet.css" />
+
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+  <input id="check" type="checkbox"/>
+    <label class="newmenu" tabindex="0" for="check">
+      <svg viewBox="0 0 30 30" width="30" height="30">
+        <path id="one" d="M4 10h22M4" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
+        <path id="two" d="M4 20h22M4" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
+      </svg>
+      Health Explorer
+    </label>
+    <aside>
+      <div class="top">
+        <div class="logo">
+            <img src="Logo.png">
+          </div>
+        <ul class="nav-menu">
+            <li>
+                <a class="nav-link" href="index.html"><i class="fas fa-home fa-2x"></i>Home</a>
+            </li>
+            <li>
+                <a class="nav-link-active" href="diet.html"><i class="fas fa-carrot fa-2x"></i>Diet Tracker</a>
+            </li>
+            <li>
+                <a class="nav-link" href="fitness.html"><i class="fas fa-running fa-2x"></i>Fitness Tracker</a>
+            </li>
+            <li>
+                <a class="nav-link" href="Articles.html"><i class="fas fa-newspaper fa-2x"></i>Health & Fitness News</a>
+            </li>
+
+        </ul>
+      </div>
+      <div class="bottom">
+        <p>&copy; 2021 Health360</p>
+      </div>
+    </aside>
+    <article>
+      <div class="wrapper">
+        <div class="content">
+          
+            
+            
+                <div class="titlebar">
+                    <h1>Diet Tracker</h1>
+                </div>
+                <div class="row">
+                    <div class="col-sm-8 col-6">
+                        <div id = "Calendar">
+                          <div class="meal-head">
+                            <h1>Your Meals at a Glance</h1>
+                          </div>
+                            <div class="calendar" id="calendar-app">
+                              <div class="calendar--day-view" id="day-view">
+                                <span class="day-view-exit" id="day-view-exit">&times;</span>
+                                <span class="day-view-date" id="day-view-date">MAY 29 2016</span>
+                                <div class="day-view-content">
+                                  <div class="day-highlight">
+                                    You <span class="day-events" id="day-events">did not have any meals planned for today</span>. &nbsp; <span tabindex="0" onkeyup="if(event.keyCode != 13) return; this.click();" class="day-events-link" id="add-event" data-date>Add a new meal?</span>
+                                  </div>
+                                  <div class="day-add-event" id="add-day-event-box" data-active="false">
+                                    <div class="calendar-row">
+                                      <div class="half">
+                                        <label class="add-event-label">
+                                           Enter a new meal
+                                          <input type="text" class="add-event-edit add-event-edit--long" placeholder="True Belgian Waffles" id="input-add-event-name">
+                                         
+                                        </label>
+                                      </div>
+                                      <div class="qtr">
+                                        <label class="add-event-label">
+                                      Cooking Start Time
+                                          <input type="text" class="add-event-edit" placeholder="8:15" id="input-add-event-start-time" data-options="1,2,3,4,5,6,7,8,9,10,11,12" data-format="datetime">
+                                          <input type="text" class="add-event-edit" placeholder="AM" id="input-add-event-start-ampm" data-options="a,p,am,pm,AM,PM">
+                                        </label>
+                                      </div>
+                                      <div class="qtr">
+                                        <label class="add-event-label">
+                                      Cooking End Time
+                                          <input type="text" class="add-event-edit" placeholder="9:00" id="input-add-event-end-time" data-options="1,2,3,4,5,6,7,8,9,10,11,12" data-format="datetime">
+                                          <input type="text" class="add-event-edit" placeholder="AM" id="input-add-event-end-ampm" data-options="a,p,am,pm,AM,PM">
+                                        </label>
+                                      </div>
+                                      <div class="half">
+                                        <a onkeyup="if(event.keyCode != 13) return; this.click();" tabindex="0" id="add-event-save" class="event-btn--save event-btn">save</a>
+                                        <a tabindex="0" id="add-event-cancel" class="event-btn--cancel event-btn">cancel</a>
+                                      </div>
+                                    </div>
+                                    
+                                  </div>
+                                  <div id="day-events-list" class="day-events-list">
+                                    
+                                  </div>
+                                  <div class="day-inspiration-quote" id="inspirational-quote">
+                                    Every child is an artist.  The problem is how to remain an artist once he grows up. –Pablo Picasso
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="calendar--view" id="calendar-view">
+                                <div class="cview__month">
+                                  <span class="cview__month-last" id="calendar-month-last">Apr</span>
+                                  <span class="cview__month-current" id="calendar-month">May</span>
+                                  <span class="cview__month-next" id="calendar-month-next">Jun</span>
+                                </div>
+                                <div class="cview__header">Sun</div>
+                                <div class="cview__header">Mon</div>
+                                <div class="cview__header">Tue</div>
+                                <div class="cview__header">Wed</div>
+                                <div class="cview__header">Thu</div>
+                                <div class="cview__header">Fri</div>
+                                <div class="cview__header">Sat</div>
+                                <div class="calendar--view" id="dates">
+                                </div>
+                              </div>
+                              <div class="footer">
+                                <span><span id="footer-date" class="footer__link">Today is May 30</span></span>    
+                              </div>
+                            </div>
+                            
+        
+                        </div>
+        
+        
+                        <div  class="AddMeals">
+                          <section class="diet-tiles">
+                            <!--Food Search-->
+                            <article class="style1">
+                                <span class="image">
+                                    <img src="https://cdn.pixabay.com/photo/2015/04/08/13/13/food-712665_1280.jpg" alt="abs" style="width:145%;height:145%;"/>
+                                </span>
+                                
+                                <a href="FoodSearch.html">
+                                  <div class="btn-label">
+                                    <h2>Find Food</h2>
+                                  </div>
+                                  <div class="content">
+                                      <p>Look up nutrition of specific foods!</p>
+                                  </div>
+                              </a>
+        
+                            </article>
+        
+                            <!--Recipie Search-->
+                            <article class="style2">
+                                <span class="image">
+                                    <img src="https://www.endocrinologyadvisor.com/wp-content/uploads/sites/9/2020/04/diet-plan_G_1176304726.jpg" alt="cardio" style="width:141%;height:141%;" />
+                                </span>
+                                <a href="Recipes.html">
+                                  <div class="btn-label">
+                                    <h2>Find Recipes</h2>
+                                  </div>
+                                    <div class="content">
+                                        <p>Search for Recipes using specific ingredients!</p>
+                                    </div>
+                                </a>
+                            </article>
+                          
+        
+                      </div>
+        
+                      
+                        
+        
+                        
+                    </div>
+                    <div class = "col-sm-3 col-2">
+                      <div class = "sidebar" id="bmi">
+                        <h2 id="bmiHeader">BMI Calculator</h2>
+                        <p class="bmiText">Height</p>
+                        <input type="text" id="height" placeholder="In inches">
+                        <p class="bmiText">Weight</p>
+                        <input type="text" id="weight" placeholder="In pounds">
+                        <p id="result"></p>
+                        <button id ="btn" class="btn">Calculate</button>
+                        <p id="info">Please enter height (in) and weight (lbs)</p>
+                      </div>
+                      <div class="container sidebar" id="CalorieCal">
+                        <div class="row">
+                          <div class="mx-auto">
+                            <div class="card-body text-center">
+                              <h1 class="heading display-5 pb-3">Daily Calorie Intake</h1>
+                              <h5 class="heading display-5 pb-3">(Recommended)</h1>
+                              <form id="calorie-form">
+                    
+                                <div class="form-group row">
+                                  <label for="age" class="col-form-label">Age</label>
+                                  <input type="number" class="form-control" id="age" placeholder="Ages 15-80">
+                                </div>
+                    
+                                <fieldset class="form-group">
+                                  <div class="row">
+                                    <legend align="left" class="col-form-label pt-0">Gender</legend>
+                                    <div id="form-radio">
+                                      <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="male" name="customRadioInline1" class="custom-control-input" checked="checked">
+                                        <label class="custom-control-label" for="male">Male</label>
+                                      </div>
+                                      <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="female" name="customRadioInline1" class="custom-control-input">
+                                        <label class="custom-control-label" for="female">Female</label>
+                                      </div>  
+                                    </div>
+                                  </div> 
+                                </fieldset> 
+                    
+                                <div class="form-group row">
+                                  <label for="weight" class="col-form-label">Weight</label>
+                                  <input type="number" class="form-control" id="Weight2" placeholder="In pounds">
+                                </div>
+                    
+                                <div class="form-group row">
+                                  <label for="height" class="col-form-label">Height</label>
+                                  <input type="number" class="form-control" id="Height2" placeholder="In inches">
+                                </div>
+                                
+                                <div class="form-group row">
+                                  <legend align="left" class="col-form-label">Activity</legend>
+                                  <select class="custom-select" id="list">
+                                    <option selected value="1">Sedentary (little or no exercise)</option>
+                                    <option value="2">Lightly active (light exercise/sports 1-3 days/week)</option>
+                                    <option value="3">Moderately active (moderate exercise/sports 3-5 days/week)</option>
+                                    <option value="4">Very active (hard exercise/sports 6-7 days a week)</option>
+                                    <option value="5">Extra active (very hard exercise/sports & physical job or 2x training)</option>
+                                  </select>
+                                </div>
+                    
+                                <div class="form-group">
+                                  <div class="calorie-btn">
+                                    <input type="submit" value="Calculate" class="btn">
+                                  </div>
+                                </div>
+                    
+                              </form>
+                    
+                              <div id="loading">
+                                <img src="./imags/Loading.gif" alt="">
+                              </div>
+                    
+                              <div id="results" class="pt-4">
+                                <h5>Total Calories</h5>
+                                <div class="form-group">
+                                  <div class="input-group">
+                                    <input type="number" class="form-control" id="total-calories" disabled>
+                                  </div>
+                                </div>                       
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          
+        
+        
+          
+        
+        
+        
+        </div>
+        </div>
+      </div>
+    </article>
+
+
+  
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <script src="diet.js"></script>
+  <script src="Calories.js"></script>
+</body>
+
+
+</html>

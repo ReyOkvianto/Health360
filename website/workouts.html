@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Workout List</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="images/LogoIcon.png"/>
+    <link href="workout_cards.css" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <a href="fitness.html"><i id="backArrow" class="far fa-arrow-alt-circle-left fa-4x"></i></a>
+        <h1>Workouts</h1>
+    </div>
+    <div id="workout-types">
+        <center>
+        <div class="search">
+            <input type="text" class="searchTerm" placeholder="What type of exercise?" id="wo-searchBar">
+            <button type="submit" class="searchButton" id="wo-searchBtn">
+                <i class="fa fa-search"></i> Search
+            </button>
+        </div></center>
+
+
+        <div class="wo-btns">
+            <button id="ab-btn">Abs</button>
+            <button id="leg-btn">Legs</button>
+            <button id="chest-btn">Chest
+            </button><button id="arm-btn">Arms</button>
+            <button id="clear-btn">Clear ❌</button>
+        </div>
+    </div>
+    <div id="root"></div>
+    <div id="loads">
+        <div class="load_more">
+            <button id="ab-load">Load More</button><button id="leg-load">Load More</button>
+            <button id="chest-load">Load More</button><button id="arm-load">Load More</button>
+        </div>
+    </div>
+    <script src="workouts.js"></script>
+</body>
+
+</html>

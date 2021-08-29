@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Health360 | Health & Fitness News</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <link rel="icon" type="image/png" href="images/LogoIcon.png"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/Articles.css">
+  
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+
+  <input id="check" type="checkbox"/>
+    <label class="newmenu" tabindex="0" for="check">
+      <svg viewBox="0 0 30 30" width="30" height="30">
+        <path id="one" d="M4 10h22M4" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
+        <path id="two" d="M4 20h22M4" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
+      </svg>
+      Health Explorer
+    </label>
+    <aside>
+      <div class="top">
+        <div class="logo">
+            <img src="images/Logo.png">
+          </div>
+        <ul class="nav-menu">
+            <li>
+                <a class="nav-link" href="/home"><i class="fas fa-home fa-2x"></i>Home</a>
+            </li>
+            <li>
+                <a class="nav-link" href="/diet"><i class="fas fa-carrot fa-2x"></i>Diet Tracker</a>
+            </li>
+            <li>
+                <a class="nav-link" href="/fitness"><i class="fas fa-running fa-2x"></i>Fitness Tracker</a>
+            </li>
+            <li>
+                <a class="nav-link-active" href="/Articles"><i class="fas fa-newspaper fa-2x"></i>Health & Fitness News</a>
+            </li>
+            <li>
+            </li>
+            <li style="font-weight: 600;">
+              <form action="signOut" method="POST">
+                <button class="nav-link"><i class="fas fa-sign-out-alt fa-2x"></i>Sign Out</button>
+              </form>
+            </li>
+
+        </ul>
+      </div>
+      <div class="bottom">
+        <p>&copy; 2021 Health360</p>
+      </div>
+    </aside>
+    <article>
+      <div class="wrapper">
+        <div class="content">
+            <div class="titlebar">
+                <h1>Health & Fitness News</h1>
+            </div>
+            
+            <div class="today-title">
+              <h2>Today's News Articles:</h2>
+            </div>
+            <div class="news">
+              <div id="headlines"></div>
+            </div>
+           
+            
+    
+            <!-- <div class="card" style="width: 18rem;"> -->
+                <!-- <img src="..." class="card-img-top" alt="...">
+                <div class="card-body"> -->
+                  <!-- <h5 class="card-title">Card title</h5> -->
+                  <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                <!-- </div> -->
+            <!-- </div> -->
+    
+            
+
+        </div>
+        <div class="footer">
+          
+        </div>
+      </div>
+    </article>
+
+    <script src="js/Articles.js"></script>
+    
+</body>
+</html>
