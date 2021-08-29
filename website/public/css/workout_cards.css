@@ -1,0 +1,125 @@
+html {
+  line-height: 1.6;
+  background-image: linear-gradient(120deg, #00e25ece, #5fe1f2);
+  background-size: auto;
+}
+
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  padding: none;
+  margin-bottom: 50px;
+  font-size: 50px;
+  color: #003947;
+}
+
+h2 {
+  text-align: center;
+  text-decoration: underline;
+  padding: none;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #003947;
+}
+
+p {
+  padding: 0 2.5rem 2.5rem;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 1rem;
+  background: white;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all .2s linear;
+  width: 500px;
+}
+
+.card:hover {
+  box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
+  transform: translate3D(0, -2px, 0);
+}
+
+/* Work Exercise buttons */
+#workout-types {
+  display: inline;
+  text-align: center;
+}
+
+.wo-btns button {
+  font-size: 15px;
+  padding: 15px 30px; 
+  border-radius: 10px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.wo-btns button:hover{
+  background-color: #7bd0c1;
+  color: white; 
+}
+
+#loads {
+  display: block;
+  text-align: center;
+}
+
+.load_more button {
+  font-size: 15px;
+  padding: 15px 30px; 
+  border-radius: 10px;
+  margin: 20px;
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  visibility: hidden;
+}
+
+
+/* Search bar */
+.search {
+  width: 30%;
+  text-align: center;
+  position: relative;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #7bd0c1;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+
+.searchButton {
+  width: 50px;
+  height: 36px;
+  border: 1px solid #7bd0c1;
+  background: #7bd0c1;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+#backArrow{
+  margin-left: 40px;
+  margin-top: 30px;
+}

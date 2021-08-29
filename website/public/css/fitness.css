@@ -1,0 +1,227 @@
+
+/* Section/Article */
+section.special, article.special {
+  text-align: center;
+}
+
+header p {
+  margin-top: -1em;
+}
+
+@media screen and (max-width: 736px) {
+
+  header p {
+    margin-top: 0;
+  }
+
+}
+
+.fit-btn-label h2{
+  font-size: 2vw;
+}
+
+/* Icon */
+
+.icon {
+  text-decoration: none;
+  border-bottom: none;
+  position: relative;
+}
+
+  .icon:before {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    text-transform: none !important;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 400;
+  }
+
+  .icon > .label {
+    display: none;
+  }
+
+  .icon:before {
+    line-height: inherit;
+  }
+
+  .icon.solid:before {
+    font-weight: 900;
+  }
+
+  .icon.brands:before {
+    font-family: 'Font Awesome 5 Brands';
+  }
+
+  .icon.style2 {
+    -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    background-color: transparent;
+    border: solid 1px #c9c9c9;
+    border-radius: 4px;
+    width: 2.65em;
+    height: 2.65em;
+    display: inline-block;
+    text-align: center;
+    line-height: 2.65em;
+    color: inherit;
+  }
+
+    .icon.style2:before {
+      font-size: 1.1em;
+    }
+
+    .icon.style2:hover, .icon.style2:focus {
+      color: #f2849e;
+      border-color: #f2849e;
+    }
+
+    .icon.style2:active {
+      background-color: rgba(242, 132, 158, 0.1);
+    }
+
+
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+  
+}
+
+/* Remove margins and padding from the list */
+.goal-list {
+  margin: 0;
+  padding: 0;
+  
+
+}
+
+/* Style the list items */
+.goal-list li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #61d2e5;
+  font-size: 18px;
+  transition: 0.2s;
+  border-radius: 10px;
+  margin-top: 2%;
+  
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+.goal-list li:nth-child(odd) {
+  background: #b0eff8;
+}
+
+/* Darker background-color on hover */
+.goal-list li:hover {
+  background: #defaff;
+}
+
+/* When clicked on, add a background color and strike out text */
+.goal-list li:focus {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+.goal-list li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+  border-radius: 5px;
+}
+
+.close:hover, .close:focus {
+  background-color: #f44336;
+  color: white;
+  
+}
+
+/* Style the header */
+.header {
+  background-image: linear-gradient(120deg, #00e25ece, #5fe1f2);
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  border-radius: 10px;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 9px;
+  padding-right: 8px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.addBtn:hover, .addBtn:focus {
+  background-color: #bbb;
+}
+
+#WorkoutSide {
+  
+  margin-top: 25px;
+  padding: 20px;
+  text-align: center;
+  
+  animation: popIn 400ms 1 forwards;
+  animation-delay: 400ms;
+  transform: translatex(100%);
+  opacity: 0;
+}
